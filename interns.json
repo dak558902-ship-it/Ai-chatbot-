@@ -1,0 +1,56 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Good Morning",
+        "Good Evening"
+      ],
+      "responses": [
+        "Hello! How can I help you?",
+        "Hi there!",
+        "Hey! Nice to meet you."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later"
+      ],
+      "responses": [
+        "Goodbye!",
+        "Have a great day!",
+        "See you again!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thank you",
+        "Thanks",
+        "Thanks a lot"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Happy to help!",
+        "My pleasure."
+      ]
+    },
+    {
+      "tag": "about",
+      "patterns": [
+        "Who are you",
+        "What are you",
+        "Tell me about yourself"
+      ],
+      "responses": [
+        "I am an AI Chatbot built using Python and Deep Learning."
+      ]
+    }
+  ]
+}

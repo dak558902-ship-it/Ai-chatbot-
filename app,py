@@ -1,0 +1,27 @@
+from flask import Flask, render_template, request, jsonify
+from chatbot import predict_class, get_response
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return """
+    <h2>AI Chatbot</h2>
+
+    <form method='POST' action='/chat'>
+        <input name='msg' placeholder='Type message'>
+        <button type='submit'>Send</button>
+    </form>
+    """
+
+@app.route("/chat", methods=["POST"])
+def chat():
+    message = request.form["msg"]
+
+    tag = predict_class(message)
+    response = get_response(tag)
+
+    return f"<h3>Bot: {response}</h3><br><a href='/'>Back</a>"
+
+if __name__ == "__main__":
+    app.run(debug=True)
